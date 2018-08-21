@@ -1,3 +1,3 @@
 # sidescroller
-Created Visual C# Express 2008 using Microsoft XNA 3.0 Framework ( 2012 )
+Updated in Visual C# 2017 using MonoGame 3.6 Framework ( 2018 ) Tech Demo in C#
 Tech Demo in C#
