@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF7659BD-1069-47EB-A754-C83B398F33A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SideScroller01</RootNamespace>
+    <AssemblyName>SideScroller01</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Objects\Actor.cs" />
+    <Compile Include="Classes\Objects\Enemies\AdonEnemy.cs" />
+    <Compile Include="Classes\Objects\Items\Base\ActorSpawner.cs" />
+    <Compile Include="Classes\Objects\Items\DoorEnemySpawner.cs" />
+    <Compile Include="Classes\PostProcessors\Bloom.cs" />
+    <Compile Include="Classes\PostProcessors\BloomSettings.cs" />
+    <Compile Include="Classes\Scene\Camera.cs" />
+    <Compile Include="Classes\Scene\Cutscene.cs" />
+    <Compile Include="Classes\Objects\Enemies\DeejayEnemy.cs" />
+    <Compile Include="Classes\Objects\Enemies\EnemyClose.cs" />
+    <Compile Include="Classes\Objects\Enemies\EnemyRanged.cs" />
+    <Compile Include="Classes\Objects\GameItem.cs" />
+    <Compile Include="Classes\GameManager.cs" />
+    <Compile Include="Classes\HUDManager.cs" />
+    <Compile Include="Classes\InputHelper.cs" />
+    <Compile Include="Classes\Input\Direction.cs" />
+    <Compile Include="Classes\Input\InputManager.cs" />
+    <Compile Include="Classes\Input\Move.cs" />
+    <Compile Include="Classes\Input\MoveList.cs" />
+    <Compile Include="Classes\Scene\Level.cs" />
+    <Compile Include="Classes\MenuManager.cs" />
+    <Compile Include="Classes\MusicManager.cs" />
+    <Compile Include="Classes\Objects\Enemies\ActorEnemy.cs" />
+    <Compile Include="Classes\Objects\Base\SpriteElement.cs" />
+    <Compile Include="Classes\Objects\Items\PickUpHealthPack.cs" />
+    <Compile Include="Classes\Objects\Items\PickUpStone.cs" />
+    <Compile Include="Classes\Objects\Player.cs" />
+    <Compile Include="Classes\Objects\Items\Rock.cs" />
+    <Compile Include="Classes\Objects\Enemies\RolentoEnemy.cs" />
+    <Compile Include="Classes\Scene\SceneEvent.cs" />
+    <Compile Include="Classes\SoundManager.cs" />
+    <Compile Include="Classes\Objects\Items\SpecialEffects.cs" />
+    <Compile Include="Classes\TextureManager.cs" />
+    <Compile Include="Classes\Objects\Items\TrashCan.cs" />
+    <Compile Include="Classes\Scene\Triggers.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Effects\BloomCombine.fx" />
+    <Content Include="Content\Effects\BloomExtract.fx" />
+    <Content Include="Content\Effects\GaussianBlur.fx" />
+    <Content Include="Content\Music\music01.mp3" />
+    <Content Include="Content\Music\music02.mp3" />
+    <Content Include="Content\Music\music03.mp3" />
+    <Content Include="Content\Sounds\Attack01.wav" />
+    <Content Include="Content\Sounds\Attack02.wav" />
+    <Content Include="Content\Sounds\Attack03.wav" />
+    <Content Include="Content\Sounds\Attack04.wav" />
+    <Content Include="Content\Sounds\Attack05.wav" />
+    <Content Include="Content\Sounds\Attack08.wav" />
+    <Content Include="Content\Sounds\Cody-Frown.wav" />
+    <Content Include="Content\Sounds\Cody-VoiceKick.wav" />
+    <Content Include="Content\Sounds\CodyWins.wav" />
+    <Content Include="Content\Sounds\Combo1-Hit.wav" />
+    <Content Include="Content\Sounds\Combo2-Hit.wav" />
+    <Content Include="Content\Sounds\Combo3-Hit.wav" />
+    <Content Include="Content\Sounds\CrashGlass.wav" />
+    <Content Include="Content\Sounds\FinishHit.wav" />
+    <Content Include="Content\Sounds\GetHit-Died.wav" />
+    <Content Include="Content\Sounds\GetHit-Shit.wav" />
+    <Content Include="Content\Sounds\GetHit01.wav" />
+    <Content Include="Content\Sounds\GetHit02.wav" />
+    <Content Include="Content\Sounds\GetHit03.wav" />
+    <Content Include="Content\Sounds\GetOutOfMyFace.wav" />
+    <Content Include="Content\Sounds\Jump.wav" />
+    <Content Include="Content\Sounds\MenuSelect.wav" />
+    <Content Include="Content\Sounds\MetalSound2.wav" />
+    <Content Include="Content\Sounds\PickUpItem.wav" />
+    <Content Include="Content\Sounds\PlayerOneUpItem.wav" />
+    <Content Include="Content\Sounds\Rolento\RolentoAttack01.wav" />
+    <Content Include="Content\Sounds\Rolento\RolentoDye.wav" />
+    <Content Include="Content\Sounds\Rolento\RolentoGetHit.wav" />
+    <Content Include="Content\Sounds\Rolento\RolentoGetHit02.wav" />
+    <Content Include="Content\Sounds\Rolento\RolentoLaugh.wav" />
+    <Content Include="Content\Sounds\Rolento\RolentoLaugh2.wav" />
+    <Content Include="Content\Sounds\Rolento\RolentoThrow.wav" />
+    <Content Include="Content\Sounds\TakeThat.wav" />
+    <Content Include="Content\Sounds\ThrowPunch.wav" />
+    <Content Include="Content\Textures\BG_Objects\DoorEntry.png" />
+    <Content Include="Content\Textures\BG_Objects\DoorEntryInside.png" />
+    <Content Include="Content\Textures\Characters\Adon\AdonAttackSpriteSheet.png" />
+    <Content Include="Content\Textures\Characters\Adon\AdonWalkIdleSpriteSheet.png" />
+    <Content Include="Content\Textures\Characters\CodySpriteAttack02Sheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Textures\Characters\CodySpriteAttackSheet.png" />
+    <Content Include="Content\Textures\Characters\CodySpriteReactSheet.png" />
+    <Content Include="Content\Textures\Characters\CodySpriteShadow.png" />
+    <Content Include="Content\Textures\Characters\CodySpriteWalkIdleSheet.png" />
+    <Content Include="Content\Textures\Characters\Deejay\DeejayAttackSpriteSheet.png" />
+    <Content Include="Content\Textures\Characters\Deejay\DeejayWalkIdleSpriteSheet.png" />
+    <Content Include="Content\Textures\Characters\Rolento\RolentoAttackSpriteSheet.png" />
+    <Content Include="Content\Textures\Characters\Rolento\RolentoWalkIdleSpriteSheet.png" />
+    <Content Include="Content\Textures\Cutscenes\adon01.jpg" />
+    <Content Include="Content\Textures\Cutscenes\adon02.jpg" />
+    <Content Include="Content\Textures\Cutscenes\boss01.jpg" />
+    <Content Include="Content\Textures\Cutscenes\cody01.jpg" />
+    <Content Include="Content\Textures\Cutscenes\cody02.jpg" />
+    <Content Include="Content\Textures\Cutscenes\deejay01.jpg" />
+    <Content Include="Content\Textures\Cutscenes\deejay02.jpg" />
+    <Content Include="Content\Textures\Cutscenes\deejay03.jpg" />
+    <Content Include="Content\Textures\Cutscenes\girl01.jpg" />
+    <Content Include="Content\Textures\Effects\small-spark.png" />
+    <Content Include="Content\Textures\GameItems\healthpack.png" />
+    <Content Include="Content\Textures\GameItems\Rocks.png" />
+    <Content Include="Content\Textures\GameItems\TrashCanHit.png" />
+    <Content Include="Content\Textures\GameItems\TrashCanNormal.png" />
+    <Content Include="Content\Textures\HowToPlay.jpg" />
+    <Content Include="Content\Textures\HUD\PlayerBar.png" />
+    <Content Include="Content\Textures\HUD\PlayerOneCodyHUD.png" />
+    <Content Include="Content\Textures\InputManager\A.png" />
+    <Content Include="Content\Textures\InputManager\B.png" />
+    <Content Include="Content\Textures\InputManager\Down.png" />
+    <Content Include="Content\Textures\InputManager\DownLeft.png" />
+    <Content Include="Content\Textures\InputManager\DownRight.png" />
+    <Content Include="Content\Textures\InputManager\Left.png" />
+    <Content Include="Content\Textures\InputManager\PadFace.png" />
+    <Content Include="Content\Textures\InputManager\Plus.png" />
+    <Content Include="Content\Textures\InputManager\Right.png" />
+    <Content Include="Content\Textures\InputManager\Up.png" />
+    <Content Include="Content\Textures\InputManager\UpLeft.png" />
+    <Content Include="Content\Textures\InputManager\UpRight.png" />
+    <Content Include="Content\Textures\InputManager\X.png" />
+    <Content Include="Content\Textures\InputManager\Y.png" />
+    <Content Include="Content\Textures\Level\Level01-b.png" />
+    <Content Include="Content\Textures\Level\Level01-bg.png" />
+    <Content Include="Content\Textures\Level\Level01-bg2.png" />
+    <Content Include="Content\Textures\Level\Level01.png" />
+    <Content Include="Content\Textures\Level\Level02-bg.png" />
+    <Content Include="Content\Textures\Level\Level02.png" />
+    <Content Include="Content\Textures\Level\Tree.png" />
+    <Content Include="Content\Textures\Level\TreeBlur.png" />
+    <Content Include="Content\Textures\singlePixel.jpg" />
+    <Content Include="Content\Textures\title_screen.jpg" />
+    <Content Include="Content\Textures\title_screenCharOff.png" />
+    <Content Include="Content\Textures\title_screenCharOn.png" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <Content Include="Content\Textures\FontLarge.spritefont" />
+    <Content Include="Content\Textures\FontSmall.spritefont" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\UI\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
