@@ -22,3 +22,7 @@ Thank you Monogame for keeping XNA alive.
 **Audio Management** comes equipped with basic sound and music managers.
 
 **Content Management** is a helper class that is included in Texture, Sound and Music Managers. Instead of manully adding you content in code, this will automatically load all the content from the foler that you specify.  
+
+## DEMO ##
+
+[Click here to download a demo](https://github.com/lavoe2k/2DTechDemo/tree/v1.0/Build/x86) for a preview.  Runs on Windows machines only.
