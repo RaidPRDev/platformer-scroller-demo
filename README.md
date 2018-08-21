@@ -9,3 +9,14 @@ This project was originally created in 2012 using XNA 3.0 Framework.  Unfortunat
 
 Thank you Monogame for keeping XNA alive.
 
+# Features
+
+
+
+**Scene Management** a combination levels, triggers and cutscenes.  
+
+- Levels.  This gives use the ability to create and manage levels and cutscenes.  In doing so, we can add game objects to the scene via code.  When the game runs, it will systematically add the game objects according to the player's position and level.
+
+- Cutscenes.  Using scene triggers we can create a sequence of sub scenes within out level at any point.
+
+- Scene Triggers.  This will give us the option on when to add certain elements, such as enemies. We can tell the game exactly when this will occur.
