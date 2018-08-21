@@ -77,16 +77,12 @@ namespace SideScroller01
 
                 case GameState.HowToPlay:
                     SBHUD.Draw(howToPlayScreen, new Vector2(0, 0), Color.White);
-                    //SBHUD.DrawString(Game1.FontSmall, "press any button to continue", new Vector2(180, 545), Color.CornflowerBlue);
                     break;
 
                 case GameState.Playing:
                     Levels[CurrentLevel].Draw(SB, SBHUD);
                     break;
-
-
             }
-
         }
 
         public static void CreateLevels()
@@ -307,28 +303,28 @@ namespace SideScroller01
             #region CutScene
             scene = new CutScene();
 
-            // Line 1 - Who are you?
+            // Line 1
             line = "I'm gonna squash you!!";
             //voiceCueName
             portrait = TextureManager.GetTexure("cody02");
             timer = 5f;
             scene.AddLine(line, portrait, timer);
 
-            // Line 2 - Who are you?
+            // Line 2 
             line = "You all are going down!";
             //voiceCueName
             portrait = TextureManager.GetTexure("cody01");
             timer = 5f;
             scene.AddLine(line, portrait, timer);
 
-            // Line 3 - Guys you all are going down, I'm coming for you Adon!
+            // Line 3 
             line = "Hehe, this is going to be a BAD day for you!";
             //voiceCueName
             portrait = TextureManager.GetTexure("deejay02"); 
             timer = 7f;
             scene.AddLine(line, portrait, timer);
 
-            // Line 4 - I'm ready!
+            // Line 4
             line = "COME ON!!!!";
             //voiceCueName
             portrait = TextureManager.GetTexure("cody02");
@@ -356,15 +352,15 @@ namespace SideScroller01
             #region CutScene
             scene = new CutScene();
 
-            // Line 1 - Who are you?
+            // Line 1
             line = "I'll take on all of you!!!";
             //voiceCueName
             portrait = TextureManager.GetTexure("cody02");
             timer = 5f;
             scene.AddLine(line, portrait, timer);
 
-            // Line 2 - Who are you?
-            line = "Fucking punks, so big but no brains...";
+            // Line 2
+            line = "Punks, so big but no brains...";
             //voiceCueName
             portrait = TextureManager.GetTexure("deejay03");
             timer = 5f;
@@ -427,28 +423,28 @@ namespace SideScroller01
             #region CutScene
             scene = new CutScene();
 
-            // Line 1 - Where are you ADON!!!!
+            // Line 1
             line = "Where are you!!!!";
             //voiceCueName
             portrait = TextureManager.GetTexure("cody01");
             timer = 3f;
             scene.AddLine(line, portrait, timer);
 
-            // Line 2 - ADOOONNN!!!!! Fucking bitch come out!!
+            // Line 2
             line = "Come out and fight!!";
             //voiceCueName
             portrait = TextureManager.GetTexure("cody02");
             timer = 4f;
             scene.AddLine(line, portrait, timer);
 
-            // Line 3 - Over here Blondie
+            // Line 3
             line = "Over here BLONDIE!! Hahahahaa!!!";
             //voiceCueName
             portrait = TextureManager.GetTexure("adon01");
             timer = 3f;
             scene.AddLine(line, portrait, timer);
 
-            // Line 4 - I'm ready!
+            // Line 4
             line = "HA!! Let's FINISH THIS COMEDY";
             //voiceCueName
             portrait = TextureManager.GetTexure("adon02");
@@ -493,14 +489,14 @@ namespace SideScroller01
             #region CutScene
             scene = new CutScene();
 
-            // Line 1 - Where are you ADON!!!!
+            // Line 1
             line = "Why are you running!!!";
             //voiceCueName
             portrait = TextureManager.GetTexure("cody02");
             timer = 3f;
             scene.AddLine(line, portrait, timer);
 
-            // Line 2 - ADOOONNN!!!!! Fucking bitch come out!!
+            // Line 2
             line = "You can't hide from me!!!";
             //voiceCueName
             portrait = TextureManager.GetTexure("cody01");
@@ -690,7 +686,7 @@ namespace SideScroller01
             scene.AddLine(line, portrait, timer);
 
             // Line 5 
-            line = "Bullshit!";
+            line = "Lies!";
             portrait = TextureManager.GetTexure("cody01");
             timer = 3f;
             scene.AddLine(line, portrait, timer);
